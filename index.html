@@ -386,7 +386,7 @@ function scheduleNextFetch(timings) {
 async function fetchAndCache() {
   const now=new Date();
   try {
-    const url=`https://api.aladhan.com/v1/timings/${{now.getDate()}}-${{now.getMonth()+1}}-${{now.getFullYear()}}?latitude=31.1107&longitude=30.9388&method=5`;
+    const url=`https://api.aladhan.com/v1/timings/${{now.getDate()}}-${{now.getMonth()+1}}-${{now.getFullYear()}}?latitude=31.1107&longitude=30.9388&method=5;
     const res=await fetch(url);
     const data=await res.json();
     if(data.code===200) {
