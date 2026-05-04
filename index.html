@@ -23,11 +23,11 @@ html, body { width: 100%; background: transparent; font-family: 'Cairo', sans-se
   align-items: stretch;
   padding: 14px 14px 10px;
   gap: 10px;
-  min-height: 150px;
+  min-height: 135px;
 }
 
 .mosque-box {
-  width: 125px;
+  width: 113px;
   flex-shrink: 0;
   border-radius: 14px;
   overflow: hidden;
@@ -60,7 +60,7 @@ html, body { width: 100%; background: transparent; font-family: 'Cairo', sans-se
 
 .day-name {
   font-family: 'Amiri', serif;
-  font-size: 66px;
+  font-size: 60px;
   font-weight: 700;
   color: #f5e8d0;
   line-height: 0.88;
@@ -68,7 +68,7 @@ html, body { width: 100%; background: transparent; font-family: 'Cairo', sans-se
 }
 
 .clock {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 700;
   color: #c8bfa8;
   direction: ltr;
@@ -78,7 +78,7 @@ html, body { width: 100%; background: transparent; font-family: 'Cairo', sans-se
   margin-top: 4px;
 }
 .clock .period {
-  font-size: 13px;
+  font-size: 12px;
   color: #c88300;
   font-weight: 700;
   margin-right: 4px;
@@ -88,7 +88,7 @@ html, body { width: 100%; background: transparent; font-family: 'Cairo', sans-se
   display: flex;
   align-items: center;
   gap: 6px;
-  margin: 5px 0 6px;
+  margin: 4px 0 5px;
   color: #c88300;
   font-size: 10px;
 }
@@ -122,13 +122,12 @@ html, body { width: 100%; background: transparent; font-family: 'Cairo', sans-se
 }
 .pill-icon { font-size: 11px; }
 
-/* status dot — shows if data is fresh or cached */
 .status-dot {
   width: 5px; height: 5px;
   border-radius: 50%;
   background: #3a3a3a;
   display: inline-block;
-  margin-right: 4px;
+  margin-right: 2px;
   vertical-align: middle;
   flex-shrink: 0;
 }
@@ -187,8 +186,6 @@ html, body { width: 100%; background: transparent; font-family: 'Cairo', sans-se
 }
 .p-period { font-size: 9px; color: #c88300; font-weight: 700; direction: rtl; }
 .p-card.active .p-time { color: #f5c040; }
-
-.loading { text-align:center; padding:16px; color:#6a7888; font-size:12px; flex:1; }
 </style>
 </head>
 <body>
@@ -198,7 +195,6 @@ html, body { width: 100%; background: transparent; font-family: 'Cairo', sans-se
     <div class="mosque-box">
       <img src="data:image/jpeg;base64,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" alt="مسجد"/>
     </div>
-
     <div class="info-block">
       <div>
         <div class="day-name" id="dayName">الأحد</div>
@@ -223,32 +219,78 @@ html, body { width: 100%; background: transparent; font-family: 'Cairo', sans-se
   </div>
 
   <div class="h-divider"></div>
-
-  <div class="prayers-row" id="prayersRow">
-    <div class="loading">جاري التحميل...</div>
-  </div>
+  <div class="prayers-row" id="prayersRow"></div>
 
 </div>
 <script>
-// ====== ICONS — change emoji or use img:base64 ======
-const ICONS = {
-  Fajr:    'emoji:🌙',
-  Sunrise: 'emoji:🌅',
-  Dhuhr:   'emoji:☀️',
-  Asr:     'emoji:⛅',
-  Maghrib: 'emoji:🌇',
-  Isha:    'emoji:🌑'
-};
-
+const ICONS = {Fajr:'🌙',Sunrise:'🌅',Dhuhr:'☀️',Asr:'⛅',Maghrib:'🌇',Isha:'🌑'};
 const NAMES = {Fajr:'الفجر',Sunrise:'الشروق',Dhuhr:'الظهر',Asr:'العصر',Maghrib:'المغرب',Isha:'العشاء'};
 const KEYS  = ['Fajr','Sunrise','Dhuhr','Asr','Maghrib','Isha'];
 const DAYS  = ['الأحد','الإثنين','الثلاثاء','الأربعاء','الخميس','الجمعة','السبت'];
 const MG    = ['يناير','فبراير','مارس','أبريل','مايو','يونيو','يوليو','أغسطس','سبتمبر','أكتوبر','نوفمبر','ديسمبر'];
 const MH    = ['محرم','صفر','ربيع الأول','ربيع الآخر','جمادى الأولى','جمادى الآخرة','رجب','شعبان','رمضان','شوال','ذو القعدة','ذو الحجة'];
 
-const STORAGE_KEY = 'prayer_cache';
+// ── حساب مواقيت الصلاة محلياً بدون نت (خوارزمية فلكية) ──
+function calcPrayerTimes(date, lat, lng) {
+  const PI = Math.PI;
+  const toRad = d => d * PI / 180;
+  const toDeg = r => r * 180 / PI;
+  const fixHour = h => h - 24 * Math.floor(h / 24);
 
-// ── Hijri calc ──
+  const year = date.getFullYear(), month = date.getMonth() + 1, day = date.getDate();
+  const JD = Math.floor(365.25*(year+4716)) + Math.floor(30.6001*(month+1)) + day - 1524.5
+    + (month <= 2 ? (Math.floor(365.25*(year-1+4716)) - Math.floor(365.25*(year+4716))) : 0)
+    + (2 - Math.floor(year/100) + Math.floor(Math.floor(year/100)/4));
+
+  const D = JD - 2451545.0;
+  const g = toRad(357.529 + 0.98560028 * D);
+  const q = 280.459 + 0.98564736 * D;
+  const L = toRad(q + 1.915 * Math.sin(g) + 0.020 * Math.sin(2*g));
+  const e = toRad(23.439 - 0.00000036 * D);
+  const RA = toDeg(Math.atan2(Math.cos(e) * Math.sin(L), Math.cos(L))) / 15;
+  const d_sun = toDeg(Math.asin(Math.sin(e) * Math.sin(L)));
+  const EqT = q/15 - fixHour(RA);
+
+  const timezone = 2; // Egypt UTC+2
+  const Dhuhr_h = 12 + timezone - (lng/15) - EqT;
+
+  function sunAngleTime(angle, isSunrise) {
+    const cosA = (-Math.sin(toRad(angle)) - Math.sin(toRad(lat))*Math.sin(toRad(d_sun)))
+                / (Math.cos(toRad(lat)) * Math.cos(toRad(d_sun)));
+    if (Math.abs(cosA) > 1) return null;
+    const t = toDeg(Math.acos(cosA)) / 15;
+    return isSunrise ? Dhuhr_h - t : Dhuhr_h + t;
+  }
+
+  function asrTime(factor) {
+    const target = toDeg(Math.atan(1/(factor + Math.tan(toRad(Math.abs(lat - d_sun))))));
+    const cosA = (Math.sin(toRad(target)) - Math.sin(toRad(lat))*Math.sin(toRad(d_sun)))
+                / (Math.cos(toRad(lat)) * Math.cos(toRad(d_sun)));
+    if (Math.abs(cosA) > 1) return null;
+    return Dhuhr_h + toDeg(Math.acos(cosA)) / 15;
+  }
+
+  function hToStr(h) {
+    if (h === null) return '00:00';
+    h = fixHour(h);
+    const hh = Math.floor(h);
+    const mm = Math.floor((h - hh) * 60);
+    return `${String(hh).padStart(2,'0')}:${String(mm).padStart(2,'0')}`;
+  }
+
+  return {
+    Fajr:    hToStr(sunAngleTime(19.5, true)),
+    Sunrise: hToStr(sunAngleTime(0.833, true)),
+    Dhuhr:   hToStr(Dhuhr_h),
+    Asr:     hToStr(asrTime(1)),
+    Maghrib: hToStr(sunAngleTime(0.833, false)),
+    Isha:    hToStr(sunAngleTime(17.5, false))
+  };
+}
+
+// كفر الشيخ
+const LAT = 31.1107, LNG = 30.9388;
+
 function hijri(date) {
   const d=date.getDate(),m=date.getMonth()+1,y=date.getFullYear();
   let jd=Math.floor((1461*(y+4800+Math.floor((m-14)/12)))/4)
@@ -256,45 +298,35 @@ function hijri(date) {
     -Math.floor((3*Math.floor((y+4900+Math.floor((m-14)/12))/100))/4)+d-32075;
   let l=jd-1948440+10632,n2=Math.floor((l-1)/10631);
   l=l-10631*n2+354;
-  let j=Math.floor((10985-l)/5316)*Math.floor((50*l)/17719)
-    +Math.floor(l/5670)*Math.floor((43*l)/15238);
-  l=l-Math.floor((30-j)/15)*Math.floor((17719*j)/50)
-    -Math.floor(j/16)*Math.floor((15238*j)/43)+29;
+  let j=Math.floor((10985-l)/5316)*Math.floor((50*l)/17719)+Math.floor(l/5670)*Math.floor((43*l)/15238);
+  l=l-Math.floor((30-j)/15)*Math.floor((17719*j)/50)-Math.floor(j/16)*Math.floor((15238*j)/43)+29;
   const hm=Math.floor((24*l)/709);
   return {d:l-Math.floor((709*hm)/24),m:hm,y:30*n2+j-30};
 }
 
 function parseDt(s) {
-  const [h,m]=s.split(':').map(Number), d=new Date();
+  const [h,m]=s.split(':').map(Number),d=new Date();
   d.setHours(h,m,0,0); return d;
 }
 
 function format12(h,m) {
   return {
-    time: `${String(h%12||12).padStart(2,'0')}:${String(m).padStart(2,'0')}`,
-    period: h>=12?'م':'ص'
+    time:`${String(h%12||12).padStart(2,'0')}:${String(m).padStart(2,'0')}`,
+    period:h>=12?'م':'ص'
   };
 }
 
-function iconHtml(key) {
-  const v=ICONS[key];
-  if(v.startsWith('img:'))
-    return `<img style="width:36px;height:36px;border-radius:8px;object-fit:cover;display:block;margin:0 auto 2px" src="${v.slice(4)}" alt=""/>`;
-  return `<span style="font-size:22px;line-height:1;display:block;margin-bottom:2px">${v.slice(6)}</span>`;
-}
-
-// ── Clock (every second — RAM only, no network) ──
+// ── ساعة — من RAM فقط ──
 function tickClock() {
-  const now=new Date(), h=now.getHours(), m=now.getMinutes(), s=now.getSeconds();
-  const h12=h%12||12, period=h>=12?'م':'ص';
+  const now=new Date(),h=now.getHours(),m=now.getMinutes(),s=now.getSeconds();
   document.getElementById('clock').textContent=
-    `${String(h12).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
-  document.getElementById('period').textContent=period;
+    `${String(h%12||12).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+  document.getElementById('period').textContent=h>=12?'م':'ص';
 }
 setInterval(tickClock,1000);
 tickClock();
 
-// ── Dates ──
+// ── تواريخ — من RAM فقط ──
 function setDates() {
   const now=new Date();
   document.getElementById('dayName').textContent=DAYS[now.getDay()];
@@ -303,121 +335,98 @@ function setDates() {
   document.getElementById('hijriDate').textContent=`${h.d} ${MH[h.m-1]} ${h.y} هـ`;
 }
 setDates();
-// refresh dates at midnight
 function msToMidnight(){const n=new Date(),m=new Date(n);m.setHours(24,0,0,0);return m-n;}
 setTimeout(()=>{setDates();setInterval(setDates,86400000);},msToMidnight());
 
-// ── Status dot ──
-function setStatus(s){
-  const dot=document.getElementById('statusDot');
-  dot.className='status-dot '+s;
-}
+function setStatus(s){document.getElementById('statusDot').className='status-dot '+s;}
 
-// ── Render prayer cards ──
+// ── عرض الكروت ──
 function render(timings) {
   const now=new Date();
-  const times=KEYS.map(k=>timings[k]?parseDt(timings[k].split(' ')[0]):null);
-  let ni=times.findIndex((t)=>t&&t>now);
+  const times=KEYS.map(k=>timings[k]?parseDt(timings[k]):null);
+  let ni=times.findIndex(t=>t&&t>now);
   if(ni===-1)ni=0;
   document.getElementById('prayersRow').innerHTML=KEYS.map((k,i)=>{
-    const raw=timings[k]?.split(' ')[0]||'00:00';
-    const [hh,mm]=raw.split(':').map(Number);
-    const {time,period}=format12(hh,mm);
+    const raw=timings[k]||'00:00';
+    const[hh,mm]=raw.split(':').map(Number);
+    const{time,period}=format12(hh,mm);
     return`<div class="p-card ${i===ni?'active':''}">
-      ${iconHtml(k)}
+      <span style="font-size:22px;line-height:1;display:block;margin-bottom:2px">${ICONS[k]}</span>
       <div class="p-name">${NAMES[k]}</div>
       <div class="p-sep">◆</div>
       <div class="p-time">${time}</div>
       <div class="p-period">${period}</div>
     </div>`;
   }).join('');
-
-  // Re-highlight active prayer every minute
-  setTimeout(()=>render(timings), 60000);
+  setTimeout(()=>render(timings),60000);
 }
 
-// ── Cache helpers ──
-function todayKey() {
-  const n=new Date();
-  return `${n.getFullYear()}-${n.getMonth()+1}-${n.getDate()}`;
-}
-
-function saveCache(timings) {
-  try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify({date:todayKey(),timings}));
-  } catch(e) {}
-}
-
-function loadCache() {
-  try {
+// ── Cache ──
+const STORAGE_KEY='prayer_kafr';
+function todayKey(){const n=new Date();return`${n.getFullYear()}-${n.getMonth()+1}-${n.getDate()}`;}
+function saveCache(t){try{localStorage.setItem(STORAGE_KEY,JSON.stringify({date:todayKey(),t}));}catch(e){}}
+function loadCache(){
+  try{
     const raw=localStorage.getItem(STORAGE_KEY);
-    if(!raw) return null;
+    if(!raw)return null;
     const obj=JSON.parse(raw);
-    if(obj.date===todayKey()) return obj.timings;
-  } catch(e) {}
+    if(obj.date===todayKey())return obj.t;
+  }catch(e){}
   return null;
 }
 
-// ── Fajr-based fetch logic ──
-// Fetch from network only once per day, as early as possible after Fajr.
-// Strategy:
-//   1. On load, check cache → if today's data exists, use it (no network).
-//   2. If no cache, fetch now.
-//   3. After a successful fetch, schedule next fetch for tomorrow's Fajr + 1 min.
-//   4. If fetch fails, retry every 10 minutes until it succeeds.
-
-let fajrTime = null; // will be set after first successful fetch
-
+// ── Fetch من النت (مرة واحدة بعد الفجر) ──
 function scheduleNextFetch(timings) {
-  // Calculate tomorrow's Fajr time
-  const fajrRaw = timings['Fajr']?.split(' ')[0];
-  if(!fajrRaw) { setTimeout(fetchAndCache, 86400000); return; }
-  const [fh,fm]=fajrRaw.split(':').map(Number);
-
+  const fajrRaw=timings['Fajr'];
+  if(!fajrRaw){setTimeout(fetchFromNet,86400000);return;}
+  const[fh,fm]=fajrRaw.split(':').map(Number);
   const tomorrow=new Date();
   tomorrow.setDate(tomorrow.getDate()+1);
-  tomorrow.setHours(fh, fm+1, 0, 0); // 1 minute after Fajr tomorrow
-
-  const msUntil=tomorrow-new Date();
-  console.log(`Next fetch scheduled in ${Math.round(msUntil/60000)} minutes (tomorrow after Fajr)`);
-  setTimeout(fetchAndCache, msUntil);
+  tomorrow.setHours(fh,fm+1,0,0);
+  setTimeout(fetchFromNet, tomorrow-new Date());
 }
 
-async function fetchAndCache() {
-  const now=new Date();
+async function fetchFromNet() {
   try {
-    const url=`https://api.aladhan.com/v1/timingsByCity/${now.getDate()}-${now.getMonth()+1}-${now.getFullYear()}?city=Alexandria&country=Egypt&method=5`;
+    const now=new Date();
+    const url=`https://api.aladhan.com/v1/timings/${now.getDate()}-${now.getMonth()+1}-${now.getFullYear()}?latitude=${LAT}&longitude=${LNG}&method=5`;
     const res=await fetch(url);
     const data=await res.json();
-    if(data.code===200) {
-      const timings=data.data.timings;
-      saveCache(timings);
+    if(data.code===200){
+      // نظف الأوقات (اشيل المنطقة الزمنية من الاسم)
+      const t={};
+      KEYS.forEach(k=>{ t[k]=data.data.timings[k]?.split(' ')[0]||'00:00'; });
+      saveCache(t);
       setStatus('online');
-      render(timings);
-      scheduleNextFetch(timings);
-    } else throw new Error('bad response');
-  } catch(e) {
+      render(t);
+      scheduleNextFetch(t);
+    } else throw 0;
+  } catch{
     setStatus('error');
-    // Retry in 10 minutes if failed
-    setTimeout(fetchAndCache, 600000);
+    setTimeout(fetchFromNet,600000);
   }
 }
 
-// ── Startup ──
-(function init() {
-  const cached=loadCache();
-  if(cached) {
-    // Have today's data — no network needed
+// ── Init: أول حاجة نحسب محلياً فوراً، وبعدين نجيب من النت لو ممكن ──
+(function(){
+  const now = new Date();
+
+  // 1. حساب محلي فوري — يظهر المواقيت على طول بدون نت
+  const local = calcPrayerTimes(now, LAT, LNG);
+  setStatus('cached');
+  render(local);
+
+  // 2. لو في cache من النهارده استخدمه
+  const cached = loadCache();
+  if(cached){
     setStatus('cached');
     render(cached);
-
-    // Still schedule tomorrow's fetch at Fajr+1min
     scheduleNextFetch(cached);
-  } else {
-    // No cache → fetch now
-    setStatus('error');
-    fetchAndCache();
+    return;
   }
+
+  // 3. جيب من النت في الخلفية
+  fetchFromNet();
 })();
 </script>
 </body>
