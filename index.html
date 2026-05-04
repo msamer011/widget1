@@ -34,8 +34,8 @@ html, body { width: 100%; background: transparent; font-family: 'Cairo', sans-se
   position: relative;
 }
 .mosque-box img {
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
   object-fit: cover;
   display: block;
   border-radius: 14px;
@@ -68,14 +68,14 @@ html, body { width: 100%; background: transparent; font-family: 'Cairo', sans-se
 }
 
 .clock {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 700;
   color: #c8bfa8;
   direction: ltr;
   text-align: right;
   font-variant-numeric: tabular-nums;
   letter-spacing: 1px;
-  margin-top: 4px;
+  margin-top: 6px;
 }
 .clock .period {
   font-size: 13px;
@@ -386,7 +386,7 @@ function scheduleNextFetch(timings) {
 async function fetchAndCache() {
   const now=new Date();
   try {
-    const url=`https://api.aladhan.com/v1/timingsByCity/${now.getDate()}-${now.getMonth()+1}-${now.getFullYear()}?city=Alexandria&country=Egypt&method=5`;
+    const url=`https://api.aladhan.com/v1/timings/${{now.getDate()}}-${{now.getMonth()+1}}-${{now.getFullYear()}}?latitude=31.1107&longitude=30.9388&method=5`;
     const res=await fetch(url);
     const data=await res.json();
     if(data.code===200) {
